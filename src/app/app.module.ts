@@ -10,7 +10,6 @@ import { MovieDirectorComponent } from './movie-director/movie-director.componen
 import { MovieSynopsisComponent } from './movie-synopsis/movie-synopsis.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
 import { UserProfileUpdateComponent } from './user-profile-update/user-profile-update.component';
 import { UserProfileDeleteComponent } from './user-profile-delete/user-profile-delete.component';
 
@@ -45,7 +44,6 @@ const appRoutes: Routes = [
     AppComponent,
     WelcomePageComponent,
     NavBarComponent,
-    FooterComponent,
     UserRegistrationFormComponent,
     UserLoginFormComponent,
     MovieCardComponent,

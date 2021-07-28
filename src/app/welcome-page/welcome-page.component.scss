@@ -16,13 +16,17 @@
   text-shadow: 3px 3px rgb(41, 41, 41);
 }
 
+.btn-container {
+  text-align: center;
+}
+
 button {
   margin: 0 20px;
-  padding: 4px 20px;
-  font-size: 1.4em;
+  padding: 3px 15px;
+  font-size: 1.3em;
   font-weight: 500;
   color: rgb(61, 58, 58);
-  width: 130px;
+  width: 120px;
 }
 
 .mat-primary:hover {

@@ -19,7 +19,7 @@
 }
 
 .card-container {
-  padding: 32px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,8 +37,7 @@ img {
 
 .actions-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+  grid-template-columns: 130px 130px;
   justify-items: center;
   align-items: center;
   min-height: 100px;
@@ -70,7 +69,7 @@ img {
 }
 
 button {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 500;
 }
 
