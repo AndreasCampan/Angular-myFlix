@@ -1,0 +1,57 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container-box">
+<ng-container *ngIf="isUser(); then nonTest; else testuser"></ng-container>
+
+  <ng-template #testuser>
+    <mat-card class="update-container">
+      <mat-card-header class="update-header">
+        <mat-card-title><span class="red-text">{{ user.Username }}</span></mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="red-text">
+        The testuser account cannot be updated!
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+
+  <ng-template #nonTest>
+    <mat-card class="update-container">
+      <mat-card-header class="update-header">
+        <mat-card-title>Profile Info</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        Username: {{ user.Username }} <br>
+        Email: {{ user.Email }} <br> 
+        DOB: {{ user.DOB }} <br> 
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+        aria-label="A button to apply account changes" mat-raised-button (click)="editUserData()" color="primary" class="regular">
+          Update
+        </button>
+        <button aria-label="button that deletes a user's account" mat-raised-button (click)="deleteUser()" class="warning" color="primary">
+          Remove Account
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-template>
+
+  <!-- Favorites -->
+  <section>
+    <h2>Favoured Movies</h2>
+    <div class="movies-container">
+      <mat-card class="card-container" *ngFor='let favorite of favorites'>
+        <mat-card-header class="card-header">
+          <mat-card-title class="card-title"><span class="title">{{favorite.Title}}</span></mat-card-title>
+        </mat-card-header>
+        <img src={{favorite.ImagePath}} alt={{favorite.Title}} />
+        <mat-card-actions class="card-actions">
+          <button mat-button class="warning"color='warn'
+            (click)='removeFavorites(favorite._id, favorite.Title)' >
+            Remove Favorite
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>    
+  </section>
+</div>
