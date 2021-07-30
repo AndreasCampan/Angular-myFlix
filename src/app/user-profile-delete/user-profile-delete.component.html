@@ -1,0 +1,11 @@
+<mat-dialog-content class="del-acc-box">
+  <h2 mat-dialog-title>Do you really want to leave us?</h2>
+  <div mat-dialog-actions class="account-actions">
+    <button mat-raised-button color="primary" aria-label="button that cancels deleting user account" (click)="cancel()" class="regular">
+      No!
+    </button>
+    <button mat-raised-button color="primary" aria-label="button that proceeds to delete user account" (click)="removeUserAccount()" class="warning">
+      Yes, delete my account!
+    </button>
+  </div>
+</mat-dialog-content>

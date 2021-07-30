@@ -1,0 +1,41 @@
+<app-nav-bar></app-nav-bar>
+<div class="movies-container">
+  <mat-card *ngFor="let movie of movies;" class="card-container">
+    <mat-card-header class="center">
+      <mat-card-title class="movie-card-title">
+        <span class="title">{{movie.Title}}</span>
+      </mat-card-title>
+    </mat-card-header>
+    <img src={{movie.ImagePath}} alt= {{movie.Title}} />
+    <mat-card-actions class="actions-box">
+      <button mat-button color="accent"
+      (click)="synopsisDetails(movie.Description)">
+        Synopsis
+      </button>
+      <button mat-button color="accent" (click)="genreDetails(movie.Genre.Name, movie.Genre.Description)">
+        Genre
+      </button>
+      <button mat-button color="accent" 
+      (click)= "directorDetails(movie.Director.Name, movie.Director.Bio)">
+        Director
+      </button>
+      <ng-container *ngIf="isFavoured(movie._id); then Faved; else unFaved">
+      </ng-container>
+
+      <ng-template #unFaved>
+        <mat-icon matTooltip="Favourite" matTooltipPosition="right" aria-label="Adds movie to user's list of favorites" 
+        (click)="toggleFavouriteMovies(movie._id)" color="accent" class="fav-icon" [inline]="true">
+          favorite_border
+        </mat-icon>
+      </ng-template>
+
+      <ng-template #Faved>
+        <mat-icon matTooltip="Unfavourite" matTooltipPosition="right" aria-label="Adds movie to user's list of favorites" 
+        (click)="toggleFavouriteMovies(movie._id)" color="accent" class="fav-icon" [inline]="true">
+          favorite
+        </mat-icon>
+      </ng-template>
+      
+    </mat-card-actions>
+  </mat-card>
+</div>

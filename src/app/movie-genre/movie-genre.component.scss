@@ -1,0 +1,24 @@
+.genre-container {
+  max-width: 600px;
+}
+
+.cls-bttn:hover {
+  color: red;
+}
+
+.genre-header {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.title {
+  font-size: 1.4em;
+}
+
+.genre-content {
+  max-height: 500px;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
