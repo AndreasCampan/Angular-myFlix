@@ -2,7 +2,7 @@
 
 # Purpose
 
-Hello and welcome to **myFlix**! My objective was to build the client side using Angular to display the data stored in my MongoDB database. The client side and server side communicates via a RESTful [API](https://github.com/AndreasCampan/filmQuarry-client). The project utilizes a single-page application with state routing to navigate between views and share URLs.
+Welcome to **myFlix**! My objective was to build the client side using Angular to display the data stored in my MongoDB database. The client side and server side communicates via a RESTful [API](https://github.com/AndreasCampan/filmQuarry-API). The project utilizes a single-page application with state routing to navigate between views and share URLs.
 
 # What will it do?
 The web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.
@@ -21,7 +21,7 @@ The web application will provide users with access to information about differen
 
 ### Stack
 1. Angular
-2. **Note** - The complete frontend and backend project is created using the MEAN stack
+2. **Note** - The complete frontend and backend project utilizes the MEAN stack
 
 ### Dependencies
 - @angular-devkit/build-angular@12.1.2
